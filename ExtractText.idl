@@ -1,0 +1,39 @@
+// ExtractText.idl : IDL source for ExtractText.dll
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ExtractText.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(0983E2B2-3728-4ACA-A98C-B1AFB4589E16),
+		oleautomation,
+		helpstring("ITextExtractor Interface"),
+		pointer_default(unique)
+	]
+	interface ITextExtractor : IUnknown
+	{
+		[helpstring("Extracts the text from the specified file (which must be accessible to the caller) using the registered IFilter consumers."), id(1)]
+			HRESULT ExtractText([in] BSTR fileName, [in] long maxLength, [out, retval] BSTR *fileText);
+	};
+
+[
+	uuid(B0CC2CCA-2C86-473b-86DB-7DCC501F4934),
+	version(1.0),
+	helpstring("ExtractText 1.0 Type Library")
+]
+library ExtractTextLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(E5070C86-C142-4199-B17B-5AA76CBA3BF2),
+		helpstring("TextExtractor Class")
+	]
+	coclass TextExtractor
+	{
+		[default] interface ITextExtractor;
+	};
+};

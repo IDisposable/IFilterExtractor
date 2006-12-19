@@ -1,0 +1,26 @@
+HKCR
+{
+	ExtractText.TextExtractor.1 = s 'TextExtractor Class'
+	{
+		CLSID = s '{E5070C86-C142-4199-B17B-5AA76CBA3BF2}'
+	}
+	ExtractText.TextExtractor = s 'TextExtractor Class'
+	{
+		CLSID = s '{E5070C86-C142-4199-B17B-5AA76CBA3BF2}'
+		CurVer = s 'ExtractText.TextExtractor.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E5070C86-C142-4199-B17B-5AA76CBA3BF2} = s 'TextExtractor Class'
+		{
+			ProgID = s 'ExtractText.TextExtractor.1'
+			VersionIndependentProgID = s 'ExtractText.TextExtractor'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{B0CC2CCA-2C86-473b-86DB-7DCC501F4934}'
+		}
+	}
+}
