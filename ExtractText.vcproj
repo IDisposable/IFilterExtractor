@@ -5,6 +5,10 @@
 	Name="ExtractText"
 	ProjectGUID="{57786EB8-1BB1-4535-8B6C-48CA004A6573}"
 	RootNamespace="ExtractText"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	Keyword="AtlProj"
 	>
 	<Platforms>
@@ -35,6 +39,12 @@
 				Outputs="$(OutDir)\regsvr32.trg"
 			/>
 			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
 				Name="VCMIDLTool"
 				HeaderFileName=""
 			/>
@@ -54,9 +64,15 @@
 				DebugInformationFormat="4"
 			/>
 			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="_DEBUG"
 				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
 			/>
 			<Tool
 				Name="VCLinkerTool"
@@ -69,8 +85,29 @@
 				TargetMachine="1"
 			/>
 			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
 		<Configuration
@@ -85,10 +122,19 @@
 			CharacterSet="1"
 			>
 			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
 				Name="VCCustomBuildTool"
 				Description="Performing registration"
 				CommandLine="if &quot;%OS%&quot;==&quot;&quot; goto NOTNT&#x0D;&#x0A;if not &quot;%OS%&quot;==&quot;Windows_NT&quot; goto NOTNT&#x0D;&#x0A;regsvr32 /s /c &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo regsvr32 exec. time &gt; &quot;$(OutDir)\regsvr32.trg&quot;&#x0D;&#x0A;goto end&#x0D;&#x0A;:NOTNT&#x0D;&#x0A;echo Warning : Cannot register Unicode DLL on Windows 95&#x0D;&#x0A;:end&#x0D;&#x0A;"
 				Outputs="$(OutDir)\regsvr32.trg"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
 			/>
 			<Tool
 				Name="VCMIDLTool"
@@ -110,6 +156,9 @@
 				SuppressStartupBanner="true"
 			/>
 			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG"
 				Culture="1033"
@@ -127,8 +176,29 @@
 				TargetMachine="1"
 			/>
 			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
 	</Configurations>
